@@ -71,6 +71,13 @@ Fill in `.env` as you complete the steps below. All variables are documented in 
 1. Deploy the service (see **Deploy**) so it has a public HTTPS URL, or expose your local server with a tunnel (`cloudflared tunnel --url http://localhost:3000` or `ngrok http 3000`).
 2. In the Pockey app's **Integrations** UI, add a personal webhook pointing at `https://<your-host>/webhooks/pockey` and subscribe to **`summary.completed`** (and optionally `action_items.regenerated`).
 3. Copy the signing secret Pockey shows you into `POCKEY_WEBHOOK_SECRET` in `.env`.
+4. **(Recommended)** Apply the custom Pockey **summary template** in
+   [`docs/pockey-summary-template.md`](docs/pockey-summary-template.md). It shapes each
+   recording's Notes into clean, consistent sections (Appointments, Reminders, and — for
+   the future handlers — Email/Text/Journal), which makes trigger-word detection and
+   appointment extraction more reliable. The v1 calendar handler also works fine with
+   Pockey's built-in "Auto Detect" preset, since it reads Pockey's structured action items
+   directly. Requires a Pockey Pro subscription.
 
 ### 4. (Optional) Claude fallback + full transcripts
 
