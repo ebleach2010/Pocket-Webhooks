@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.log
+
+# Local secrets / config — never commit
+.env
+.env.*
+!.env.example
+
+# Local data store (idempotency keys + audit log)
+data/
+*.sqlite
+*.sqlite-*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
