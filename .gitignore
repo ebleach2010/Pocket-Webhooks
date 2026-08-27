@@ -1,0 +1,26 @@
+node_modules/
+dist/
+*.log
+
+# Local secrets / config — never commit
+.env
+.env.*
+!.env.example
+
+# Local data store (idempotency keys + audit log)
+data/
+*.sqlite
+*.sqlite-*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Claude Code local state. settings.local.json is this machine's own
+# permission choices, and worktrees/ holds throwaway checkouts an agent
+# creates while it works and removes when it finishes. Neither is project
+# code. Shared project config (.claude/settings.json, skills, agents) is not
+# ignored and can still be committed.
+.claude/settings.local.json
+.claude/worktrees/

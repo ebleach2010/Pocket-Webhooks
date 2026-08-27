@@ -1,0 +1,20 @@
+{
+  "calendar": {
+    "triggerPhrases": [
+      "add to calendar",
+      "add to my calendar",
+      "add this to my calendar",
+      "put on my calendar",
+      "put this on my calendar",
+      "put it on my calendar",
+      "schedule this",
+      "calendar this",
+      "add an appointment",
+      "book an appointment",
+      "make an appointment",
+      "set an appointment"
+    ],
+    "autoPromoteTimedReminders": true,
+    "autoPromoteAllDayReminders": false
+  }
+}
