@@ -41,6 +41,7 @@ Read the three rules first. They apply to any assistant helping with this.
 - [ ] Look only: Workers and Pages, the worker `pocket-advocate`, Settings, Variables and Secrets. Every sensitive value must show as Secret or Encrypted (see the list of names in Part B).
 - [ ] Where the domain was bought: registrar lock on, auto-renew on, two-step sign-in on. Whoever controls the domain controls the site and the email.
 - [ ] Workers and Pages, the worker `pocket-advocate`, Settings, Build (branch control) and Domains and Routes (Preview URLs): Cloudflare builds **every branch pushed to GitHub**, not only `main`, and gives each one a preview web address on `workers.dev`. Those previews run unfinished code against the **live** database and payment settings. The addresses are hard to guess and sign-in is still required, but unfinished code should not be reachable at all. Either turn off builds for branches other than `main`, or turn off Preview URLs. Seen on 2026-11-18 when the `wip/...` branches were pushed.
+- [ ] GitHub, the repository, Branches: delete the five `wip/...` branches (`wip/faceid`, `wip/hoursattend`, `wip/landing5`, `wip/payrun`, `wip/staffui`) with the bin icon on each row. Their work is saved in this package's `bundles/` folder. The assistant that pushed them was not allowed to delete branches, so the owner does this by hand. Never push unfinished work to GitHub again while branch builds or Preview URLs are on.
 
 ### GitHub (the repository `ebleach2010/pocket-advocate`)
 

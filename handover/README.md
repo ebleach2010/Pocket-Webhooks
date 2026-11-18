@@ -17,7 +17,7 @@ Eric is not a developer. He uses the app on an iPhone (added to the Home Screen)
 ## Where the code is
 
 - GitHub: `ebleach2010/pocket-advocate` (private). `main` is what is live.
-- Unfinished work is on branches named `wip/...` (see `STATUS.md`). Each one has a brief in `briefs/` that says exactly what it is for.
+- Unfinished work is in this package's `bundles/` folder, one file per branch (see `STATUS.md` for how to open them). It is kept off GitHub on purpose. Each one has a brief in `briefs/` that says exactly what it is for.
 - The project's own rule book is `CLAUDE.md` in the repo root. Read all of it before changing anything. The owner's decisions, with his words, are in `docs/DECISIONS.md` (newest first). What each test covers is in `docs/SUITES.md`.
 
 ## How it is built
@@ -79,4 +79,5 @@ The **practice copy** lets you see the app with made-up people and no real data:
 - `RULES.md`: the owner's standing rules. These are not optional.
 - `SECURITY-CHECKLIST.md`: the Firebase, Cloudflare, GitHub, Stripe and Google steps that still need doing, and which ones only the owner can do.
 - `Account-safety-steps.pdf`: the same account steps as a printable sheet written for the owner (dated 2026-11-15).
+- `bundles/`: the unfinished branches as git bundle files (commits on top of `main` only).
 - `briefs/`: the working brief for each unfinished branch, plus `COMMON.md` (rules every builder follows) and the owner's own landing page brief.

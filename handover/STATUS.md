@@ -40,7 +40,7 @@ Shipped in the last two days, newest first:
 
 ## 🟡 In progress: three branches, each with a brief
 
-All three were being worked on by background builders at the time of writing. Each branch is pushed to GitHub as `wip/<name>`. Read the brief, then `git log origin/main..wip/<name>` and the branch's own entry in `docs/DECISIONS.md` to see how far it got. **None of them has been verified or shipped. Merge `main` into each first.**
+All three were being worked on by background builders at the time of writing. They are **not** on GitHub on purpose (Cloudflare builds every pushed branch at a preview address against the live database; see `SECURITY-CHECKLIST.md`). Each one is in `bundles/wip-<name>.bundle`, holding only the commits on top of `main`. To open one inside a clone of the repo: `git fetch /path/to/bundles/wip-<name>.bundle origin/wip/<name>:wip/<name>`. Do not push it back to GitHub unless the owner has turned off branch builds or Preview URLs in Cloudflare. Read the brief, then `git log main..wip/<name>` and the branch's own entry in `docs/DECISIONS.md` to see how far it got. **None of them has been verified or shipped. Merge `main` into each first.** The bundles are a snapshot from 2026-11-18; the builders kept working after it, so ask the owner for a newer package if one exists.
 
 | Branch | Brief | What it is | How far |
 |---|---|---|---|
