@@ -40,6 +40,7 @@ Read the three rules first. They apply to any assistant helping with this.
 - [ ] Look only: Security, Bots. Report whether Bot Fight Mode is on. It can put a challenge page in front of sign-in, so do not change it without testing sign-in afterwards.
 - [ ] Look only: Workers and Pages, the worker `pocket-advocate`, Settings, Variables and Secrets. Every sensitive value must show as Secret or Encrypted (see the list of names in Part B).
 - [ ] Where the domain was bought: registrar lock on, auto-renew on, two-step sign-in on. Whoever controls the domain controls the site and the email.
+- [ ] Workers and Pages, the worker `pocket-advocate`, Settings, Build (branch control) and Domains and Routes (Preview URLs): Cloudflare builds **every branch pushed to GitHub**, not only `main`, and gives each one a preview web address on `workers.dev`. Those previews run unfinished code against the **live** database and payment settings. The addresses are hard to guess and sign-in is still required, but unfinished code should not be reachable at all. Either turn off builds for branches other than `main`, or turn off Preview URLs. Seen on 2026-11-18 when the `wip/...` branches were pushed.
 
 ### GitHub (the repository `ebleach2010/pocket-advocate`)
 
